@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A84DAF71-B3D9-488F-9BD9-21A1B97C85B1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PpRStandardLib</RootNamespace>
+    <AssemblyName>PpRStandardLib</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\ControlModifiers\CenterParentMsgBox\MsgBox.cs" />
+    <Compile Include="Classes\ControlModifiers\CenterParentMsgBox\Win32.cs" />
+    <Compile Include="Classes\ControlModifiers\TaskDialog\ActiveTaskDialog.cs" />
+    <Compile Include="Classes\ControlModifiers\TaskDialog\TaskDialog.cs" />
+    <Compile Include="Classes\ControlModifiers\TaskDialog\TaskDialogCommonDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\ControlModifiers\TaskDialog\TaskDialogNotificationArgs.cs" />
+    <Compile Include="Classes\ControlModifiers\TaskDialog\UnsafeNativeMethods.cs" />
+    <Compile Include="Classes\Renderers\ApplyRenderer\ApplyRenderer.cs" />
+    <Compile Include="Classes\Renderers\ApplyRenderer\ListViewHelper.cs" />
+    <Compile Include="Classes\Renderers\ApplyRenderer\ToolStripHelper.cs" />
+    <Compile Include="Classes\Renderers\ApplyRenderer\TreeViewHelper.cs" />
+    <Compile Include="Classes\Renderers\AreoTheme.cs" />
+    <Compile Include="Classes\Renderers\NativeToolStripRenderer.cs" />
+    <Compile Include="Classes\Renderers\SystemToolStripRenderer\System3DColorTable.cs" />
+    <Compile Include="Classes\Renderers\TabControlRenderer.cs" />
+    <Compile Include="Classes\Renderers\Windows7Renderer\Windows7ColorTable.cs" />
+    <Compile Include="Classes\Renderers\Windows7Renderer\Windows7Helpers.cs" />
+    <Compile Include="Classes\Renderers\Windows7Renderer\Windows7Renderer.cs" />
+    <Compile Include="Classes\Tasks.cs" />
+    <Compile Include="Classes\XML\XMLWriter.cs" />
+    <Compile Include="Controls\External\2DPushGraph.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\External\ImagedComboBox\ComboBoxItem.cs" />
+    <Compile Include="Controls\External\ImagedComboBox\ComboCollection.cs" />
+    <Compile Include="Controls\External\ImagedComboBox\ImagedComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\External\LinkLabel2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\External\RoundCornerPanel\CornerCurveMode.cs" />
+    <Compile Include="Controls\External\RoundCornerPanel\CustomPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\External\RoundCornerPanel\LinearGradientMode.cs" />
+    <Compile Include="Controls\External\SplitButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\External\SyntaxRichTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TextBoxExtended.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\URLSyntaxTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\External\UxTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\External\UxTabControl\GdiMemoryContext.cs" />
+    <Compile Include="Controls\External\UxTabControl\NativeMethods.cs" />
+    <Compile Include="Controls\External\UxTabControl\NativeUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\External\VistaMenu\OwnerDrawnMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\External\VistaMenu\VistaMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FullListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FullTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\General\LogEventsListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\General\LogEventsListView.Designer.cs">
+      <DependentUpon>LogEventsListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\General\TasksListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\General\TasksListView.Designer.cs">
+      <DependentUpon>TasksListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\General\ProjectPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\General\ProjectPanel.designer.cs">
+      <DependentUpon>ProjectPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\General\StubIDGroupListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\General\StubIDGroupListView.Designer.cs">
+      <DependentUpon>StubIDGroupListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\General\UserDataFields.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\General\UserDataFields.Designer.cs">
+      <DependentUpon>UserDataFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\General\splitContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\General\splitContainer.Designer.cs">
+      <DependentUpon>splitContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DataUpdater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DataUpdater.Designer.cs">
+      <DependentUpon>DataUpdater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NetStat\NetStatTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NetStat\NetStatTool.Designer.cs">
+      <DependentUpon>NetStatTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NetStat\PingTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NetStat\PingTool.Designer.cs">
+      <DependentUpon>PingTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NetStat\TraceRoute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NetStat\TraceRoute.Designer.cs">
+      <DependentUpon>TraceRoute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptionsBaseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OptionsTreeNode.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\External\RoundCornerPanel\CustomPanel.resx">
+      <DependentUpon>CustomPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\General\LogEventsListView.resx">
+      <DependentUpon>LogEventsListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\General\TasksListView.resx">
+      <DependentUpon>TasksListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\General\ProjectPanel.resx">
+      <DependentUpon>ProjectPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\General\StubIDGroupListView.resx">
+      <DependentUpon>StubIDGroupListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\General\UserDataFields.resx">
+      <DependentUpon>UserDataFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\General\splitContainer.resx">
+      <DependentUpon>splitContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DataUpdater.resx">
+      <DependentUpon>DataUpdater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NetStat\NetStatTool.resx">
+      <DependentUpon>NetStatTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NetStat\PingTool.resx">
+      <DependentUpon>PingTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NetStat\TraceRoute.resx">
+      <DependentUpon>TraceRoute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsBaseControl.resx">
+      <DependentUpon>OptionsBaseControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

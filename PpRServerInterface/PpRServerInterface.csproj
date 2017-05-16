@@ -1,0 +1,661 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{28611304-BA04-46D5-84A9-8ABD0D3785AC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PpRServerInterface</RootNamespace>
+    <AssemblyName>Prepril Server Interface</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Project Controller Server Interface.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Project Controller Server Interface.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Joystick.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>PpRServerInterface.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PpRStandardLib">
+      <HintPath>..\PpRStandardLib\bin\Debug\PpRStandardLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\EventManager\EventManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EventManager\EventManager.Designer.cs">
+      <DependentUpon>EventManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Misc\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Misc\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ServerInterface\TaskProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ServerInterface\TaskProperties.Designer.cs">
+      <DependentUpon>TaskProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ServerInterface\TrayPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ServerInterface\TrayPassword.Designer.cs">
+      <DependentUpon>TrayPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Server\SocketProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Server\SocketProperties.Designer.cs">
+      <DependentUpon>SocketProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings\Controls\settings_plugins.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\Controls\settings_admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\Controls\settings_speedlimits.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\Controls\settings_SSL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserFeatures\SessionInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserFeatures\SessionInfo.Designer.cs">
+      <DependentUpon>SessionInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings\Controls\settings_autoban.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\Controls\settings_ip_binding.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\Controls\settings_ip_filter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\Controls\settings_messages.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\Controls\settings_misc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\Controls\settings_security.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\CreateCertificate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\CreateCertificate.Designer.cs">
+      <DependentUpon>CreateCertificate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Misc\Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Misc\Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ServerInterface\ModuleUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ServerInterface\ModuleUpdate.Designer.cs">
+      <DependentUpon>ModuleUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Server\AddressManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Server\AddressManager.Designer.cs">
+      <DependentUpon>AddressManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Server\QuickConnect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Server\QuickConnect.Designer.cs">
+      <DependentUpon>QuickConnect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ServerInterface\SvrInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ServerInterface\SvrInterface.Designer.cs">
+      <DependentUpon>SvrInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Server\SvrProcesses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Server\SvrProcesses.Designer.cs">
+      <DependentUpon>SvrProcesses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Plugins\PluginAttributes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Plugins\PluginAttributes.Designer.cs">
+      <DependentUpon>PluginAttributes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ServerSetup\Controls\MySQLConnection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ServerSetup\Controls\MySQLConnection.Designer.cs">
+      <DependentUpon>MySQLConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ServerSetup\ServerSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Plugins\PluginManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Plugins\PluginManager.Designer.cs">
+      <DependentUpon>PluginManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StubServer\Properties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StubServer\Properties.Designer.cs">
+      <DependentUpon>Properties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserFeatures\Controls\conf_groups.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserFeatures\Controls\conf_policy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserFeatures\Controls\conf_users.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserFeatures\Controls\Users.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserFeatures\Controls\Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserFeatures\UserFeatures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\Settings\Controls\conf_template.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\Controls\settings_advanced.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\Controls\settings_connections.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\Controls\settings_development.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\Controls\settings_general.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\Controls\settings_ui.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\Controls\settings_logging.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\Controls\settings_updates.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="Forms\EventManager\EventManager.resx">
+      <DependentUpon>EventManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Misc\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ServerInterface\TaskProperties.resx">
+      <DependentUpon>TaskProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ServerInterface\TrayPassword.resx">
+      <DependentUpon>TrayPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Server\SocketProperties.resx">
+      <DependentUpon>SocketProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\Controls\settings_plugins.resx">
+      <DependentUpon>settings_plugins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\Controls\settings_admin.resx">
+      <DependentUpon>settings_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\Controls\settings_messages.resx">
+      <DependentUpon>settings_messages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\Controls\settings_speedlimits.resx">
+      <DependentUpon>settings_speedlimits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\Controls\settings_SSL.resx">
+      <DependentUpon>settings_SSL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserFeatures\SessionInfo.resx">
+      <DependentUpon>SessionInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\CreateCertificate.resx">
+      <DependentUpon>CreateCertificate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Misc\Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ServerInterface\ModuleUpdate.resx">
+      <DependentUpon>ModuleUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Server\AddressManager.resx">
+      <DependentUpon>AddressManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Server\QuickConnect.resx">
+      <DependentUpon>QuickConnect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ServerInterface\SvrInterface.resx">
+      <DependentUpon>SvrInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Server\SvrProcesses.resx">
+      <DependentUpon>SvrProcesses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Plugins\PluginAttributes.resx">
+      <DependentUpon>PluginAttributes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ServerSetup\Controls\MySQLConnection.resx">
+      <DependentUpon>MySQLConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ServerSetup\ServerSetup.resx">
+      <DependentUpon>ServerSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Plugins\PluginManager.resx">
+      <DependentUpon>PluginManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StubServer\Properties.resx">
+      <DependentUpon>Properties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserFeatures\Controls\Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserFeatures\UserFeatures.resx">
+      <DependentUpon>UserFeatures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Forms\Settings\Controls\conf_template.resx">
+      <DependentUpon>conf_template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\Controls\settings_advanced.resx">
+      <DependentUpon>settings_advanced.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\Controls\settings_connections.resx">
+      <DependentUpon>settings_connections.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\Controls\settings_development.resx">
+      <DependentUpon>settings_development.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\Controls\settings_general.resx">
+      <DependentUpon>settings_general.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\Controls\settings_ui.resx">
+      <DependentUpon>settings_ui.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\Controls\settings_logging.resx">
+      <DependentUpon>settings_logging.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\Controls\settings_updates.resx">
+      <DependentUpon>settings_updates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\accept_button.png" />
+    <Content Include="Resources\app_cert_64.png" />
+    <Content Include="Resources\cog_edit.png" />
+    <Content Include="Resources\connections.png" />
+    <Content Include="Resources\error.png" />
+    <Content Include="Resources\firewall.png" />
+    <Content Include="Resources\flags\ad.png" />
+    <Content Include="Resources\flags\ae.png" />
+    <Content Include="Resources\flags\af.png" />
+    <Content Include="Resources\flags\ag.png" />
+    <Content Include="Resources\flags\ai.png" />
+    <Content Include="Resources\flags\al.png" />
+    <Content Include="Resources\flags\am.png" />
+    <Content Include="Resources\flags\an.png" />
+    <Content Include="Resources\flags\ao.png" />
+    <Content Include="Resources\flags\ar.png" />
+    <Content Include="Resources\flags\as.png" />
+    <Content Include="Resources\flags\at.png" />
+    <Content Include="Resources\flags\au.png" />
+    <Content Include="Resources\flags\aw.png" />
+    <Content Include="Resources\flags\ax.png" />
+    <Content Include="Resources\flags\az.png" />
+    <Content Include="Resources\flags\ba.png" />
+    <Content Include="Resources\flags\bb.png" />
+    <Content Include="Resources\flags\bd.png" />
+    <Content Include="Resources\flags\be.png" />
+    <Content Include="Resources\flags\bf.png" />
+    <Content Include="Resources\flags\bg.png" />
+    <Content Include="Resources\flags\bh.png" />
+    <Content Include="Resources\flags\bi.png" />
+    <Content Include="Resources\flags\bj.png" />
+    <Content Include="Resources\flags\bm.png" />
+    <Content Include="Resources\flags\bn.png" />
+    <Content Include="Resources\flags\bo.png" />
+    <Content Include="Resources\flags\br.png" />
+    <Content Include="Resources\flags\bs.png" />
+    <Content Include="Resources\flags\bt.png" />
+    <Content Include="Resources\flags\bv.png" />
+    <Content Include="Resources\flags\bw.png" />
+    <Content Include="Resources\flags\by.png" />
+    <Content Include="Resources\flags\bz.png" />
+    <Content Include="Resources\flags\ca.png" />
+    <Content Include="Resources\flags\catalonia.png" />
+    <Content Include="Resources\flags\cc.png" />
+    <Content Include="Resources\flags\cd.png" />
+    <Content Include="Resources\flags\cf.png" />
+    <Content Include="Resources\flags\cg.png" />
+    <Content Include="Resources\flags\ch.png" />
+    <Content Include="Resources\flags\ci.png" />
+    <Content Include="Resources\flags\ck.png" />
+    <Content Include="Resources\flags\cl.png" />
+    <Content Include="Resources\flags\cm.png" />
+    <Content Include="Resources\flags\cn.png" />
+    <Content Include="Resources\flags\co.png" />
+    <Content Include="Resources\flags\cr.png" />
+    <Content Include="Resources\flags\cs.png" />
+    <Content Include="Resources\flags\cu.png" />
+    <Content Include="Resources\flags\cv.png" />
+    <Content Include="Resources\flags\cx.png" />
+    <Content Include="Resources\flags\cy.png" />
+    <Content Include="Resources\flags\cz.png" />
+    <Content Include="Resources\flags\de.png" />
+    <Content Include="Resources\flags\dj.png" />
+    <Content Include="Resources\flags\dk.png" />
+    <Content Include="Resources\flags\dm.png" />
+    <Content Include="Resources\flags\do.png" />
+    <Content Include="Resources\flags\dz.png" />
+    <Content Include="Resources\flags\ec.png" />
+    <Content Include="Resources\flags\ee.png" />
+    <Content Include="Resources\flags\eg.png" />
+    <Content Include="Resources\flags\eh.png" />
+    <Content Include="Resources\flags\england.png" />
+    <Content Include="Resources\flags\er.png" />
+    <Content Include="Resources\flags\es.png" />
+    <Content Include="Resources\flags\et.png" />
+    <Content Include="Resources\flags\europeanunion.png" />
+    <Content Include="Resources\flags\fam.png" />
+    <Content Include="Resources\flags\fi.png" />
+    <Content Include="Resources\flags\fj.png" />
+    <Content Include="Resources\flags\fk.png" />
+    <Content Include="Resources\flags\fm.png" />
+    <Content Include="Resources\flags\fo.png" />
+    <Content Include="Resources\flags\fr.png" />
+    <Content Include="Resources\flags\ga.png" />
+    <Content Include="Resources\flags\gb.png" />
+    <Content Include="Resources\flags\gd.png" />
+    <Content Include="Resources\flags\ge.png" />
+    <Content Include="Resources\flags\gf.png" />
+    <Content Include="Resources\flags\gh.png" />
+    <Content Include="Resources\flags\gi.png" />
+    <Content Include="Resources\flags\gl.png" />
+    <Content Include="Resources\flags\gm.png" />
+    <Content Include="Resources\flags\gn.png" />
+    <Content Include="Resources\flags\gp.png" />
+    <Content Include="Resources\flags\gq.png" />
+    <Content Include="Resources\flags\gr.png" />
+    <Content Include="Resources\flags\gs.png" />
+    <Content Include="Resources\flags\gt.png" />
+    <Content Include="Resources\flags\gu.png" />
+    <Content Include="Resources\flags\gw.png" />
+    <Content Include="Resources\flags\gy.png" />
+    <Content Include="Resources\flags\hk.png" />
+    <Content Include="Resources\flags\hm.png" />
+    <Content Include="Resources\flags\hn.png" />
+    <Content Include="Resources\flags\hr.png" />
+    <Content Include="Resources\flags\ht.png" />
+    <Content Include="Resources\flags\hu.png" />
+    <Content Include="Resources\flags\id.png" />
+    <Content Include="Resources\flags\ie.png" />
+    <Content Include="Resources\flags\il.png" />
+    <Content Include="Resources\flags\in.png" />
+    <Content Include="Resources\flags\io.png" />
+    <Content Include="Resources\flags\iq.png" />
+    <Content Include="Resources\flags\ir.png" />
+    <Content Include="Resources\flags\is.png" />
+    <Content Include="Resources\flags\it.png" />
+    <Content Include="Resources\flags\jm.png" />
+    <Content Include="Resources\flags\jo.png" />
+    <Content Include="Resources\flags\jp.png" />
+    <Content Include="Resources\flags\ke.png" />
+    <Content Include="Resources\flags\kg.png" />
+    <Content Include="Resources\flags\kh.png" />
+    <Content Include="Resources\flags\ki.png" />
+    <Content Include="Resources\flags\km.png" />
+    <Content Include="Resources\flags\kn.png" />
+    <Content Include="Resources\flags\kp.png" />
+    <Content Include="Resources\flags\kr.png" />
+    <Content Include="Resources\flags\kw.png" />
+    <Content Include="Resources\flags\ky.png" />
+    <Content Include="Resources\flags\kz.png" />
+    <Content Include="Resources\flags\la.png" />
+    <Content Include="Resources\flags\lb.png" />
+    <Content Include="Resources\flags\lc.png" />
+    <Content Include="Resources\flags\li.png" />
+    <Content Include="Resources\flags\lk.png" />
+    <Content Include="Resources\flags\lr.png" />
+    <Content Include="Resources\flags\ls.png" />
+    <Content Include="Resources\flags\lt.png" />
+    <Content Include="Resources\flags\lu.png" />
+    <Content Include="Resources\flags\lv.png" />
+    <Content Include="Resources\flags\ly.png" />
+    <Content Include="Resources\flags\ma.png" />
+    <Content Include="Resources\flags\mc.png" />
+    <Content Include="Resources\flags\md.png" />
+    <Content Include="Resources\flags\me.png" />
+    <Content Include="Resources\flags\mg.png" />
+    <Content Include="Resources\flags\mh.png" />
+    <Content Include="Resources\flags\mk.png" />
+    <Content Include="Resources\flags\ml.png" />
+    <Content Include="Resources\flags\mm.png" />
+    <Content Include="Resources\flags\mn.png" />
+    <Content Include="Resources\flags\mo.png" />
+    <Content Include="Resources\flags\mp.png" />
+    <Content Include="Resources\flags\mq.png" />
+    <Content Include="Resources\flags\mr.png" />
+    <Content Include="Resources\flags\ms.png" />
+    <Content Include="Resources\flags\mt.png" />
+    <Content Include="Resources\flags\mu.png" />
+    <Content Include="Resources\flags\mv.png" />
+    <Content Include="Resources\flags\mw.png" />
+    <Content Include="Resources\flags\mx.png" />
+    <Content Include="Resources\flags\my.png" />
+    <Content Include="Resources\flags\mz.png" />
+    <Content Include="Resources\flags\na.png" />
+    <Content Include="Resources\flags\nc.png" />
+    <Content Include="Resources\flags\ne.png" />
+    <Content Include="Resources\flags\nf.png" />
+    <Content Include="Resources\flags\ng.png" />
+    <Content Include="Resources\flags\ni.png" />
+    <Content Include="Resources\flags\nl.png" />
+    <Content Include="Resources\flags\no.png" />
+    <Content Include="Resources\flags\np.png" />
+    <Content Include="Resources\flags\nr.png" />
+    <Content Include="Resources\flags\nu.png" />
+    <Content Include="Resources\flags\nz.png" />
+    <Content Include="Resources\flags\om.png" />
+    <Content Include="Resources\flags\pa.png" />
+    <Content Include="Resources\flags\pe.png" />
+    <Content Include="Resources\flags\pf.png" />
+    <Content Include="Resources\flags\pg.png" />
+    <Content Include="Resources\flags\ph.png" />
+    <Content Include="Resources\flags\pk.png" />
+    <Content Include="Resources\flags\pl.png" />
+    <Content Include="Resources\flags\pm.png" />
+    <Content Include="Resources\flags\pn.png" />
+    <Content Include="Resources\flags\pr.png" />
+    <Content Include="Resources\flags\ps.png" />
+    <Content Include="Resources\flags\pt.png" />
+    <Content Include="Resources\flags\pw.png" />
+    <Content Include="Resources\flags\py.png" />
+    <Content Include="Resources\flags\qa.png" />
+    <Content Include="Resources\flags\re.png" />
+    <Content Include="Resources\flags\ro.png" />
+    <Content Include="Resources\flags\rs.png" />
+    <Content Include="Resources\flags\ru.png" />
+    <Content Include="Resources\flags\rw.png" />
+    <Content Include="Resources\flags\sa.png" />
+    <Content Include="Resources\flags\sb.png" />
+    <Content Include="Resources\flags\sc.png" />
+    <Content Include="Resources\flags\scotland.png" />
+    <Content Include="Resources\flags\sd.png" />
+    <Content Include="Resources\flags\se.png" />
+    <Content Include="Resources\flags\sg.png" />
+    <Content Include="Resources\flags\sh.png" />
+    <Content Include="Resources\flags\si.png" />
+    <Content Include="Resources\flags\sj.png" />
+    <Content Include="Resources\flags\sk.png" />
+    <Content Include="Resources\flags\sl.png" />
+    <Content Include="Resources\flags\sm.png" />
+    <Content Include="Resources\flags\sn.png" />
+    <Content Include="Resources\flags\so.png" />
+    <Content Include="Resources\flags\sr.png" />
+    <Content Include="Resources\flags\st.png" />
+    <Content Include="Resources\flags\sv.png" />
+    <Content Include="Resources\flags\sy.png" />
+    <Content Include="Resources\flags\sz.png" />
+    <Content Include="Resources\flags\tc.png" />
+    <Content Include="Resources\flags\td.png" />
+    <Content Include="Resources\flags\tf.png" />
+    <Content Include="Resources\flags\tg.png" />
+    <Content Include="Resources\flags\th.png" />
+    <Content Include="Resources\flags\tj.png" />
+    <Content Include="Resources\flags\tk.png" />
+    <Content Include="Resources\flags\tl.png" />
+    <Content Include="Resources\flags\tm.png" />
+    <Content Include="Resources\flags\tn.png" />
+    <Content Include="Resources\flags\to.png" />
+    <Content Include="Resources\flags\tr.png" />
+    <Content Include="Resources\flags\tt.png" />
+    <Content Include="Resources\flags\tv.png" />
+    <Content Include="Resources\flags\tw.png" />
+    <Content Include="Resources\flags\tz.png" />
+    <Content Include="Resources\flags\ua.png" />
+    <Content Include="Resources\flags\ug.png" />
+    <Content Include="Resources\flags\um.png" />
+    <Content Include="Resources\flags\us.png" />
+    <Content Include="Resources\flags\uy.png" />
+    <Content Include="Resources\flags\uz.png" />
+    <Content Include="Resources\flags\va.png" />
+    <Content Include="Resources\flags\vc.png" />
+    <Content Include="Resources\flags\ve.png" />
+    <Content Include="Resources\flags\vg.png" />
+    <Content Include="Resources\flags\vi.png" />
+    <Content Include="Resources\flags\vn.png" />
+    <Content Include="Resources\flags\vu.png" />
+    <Content Include="Resources\flags\wales.png" />
+    <Content Include="Resources\flags\wf.png" />
+    <Content Include="Resources\flags\ws.png" />
+    <Content Include="Resources\flags\ye.png" />
+    <Content Include="Resources\flags\yt.png" />
+    <Content Include="Resources\flags\za.png" />
+    <Content Include="Resources\flags\zm.png" />
+    <Content Include="Resources\flags\zw.png" />
+    <Content Include="Resources\Joystick.ico" />
+    <Content Include="Resources\lightning.png" />
+    <Content Include="Resources\lightning_go.png" />
+    <Content Include="Resources\lock.png" />
+    <Content Include="Resources\lock_go.png" />
+    <Content Include="Resources\plugin.png" />
+    <Content Include="Resources\plug_connect.png" />
+    <Content Include="Resources\plug_disconnect.png" />
+    <Content Include="Resources\server_go.png" />
+    <Content Include="Resources\server_lightning.png" />
+    <Content Include="Resources\user.png" />
+    <Content Include="Resources\virus_protection.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

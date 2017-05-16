@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D7F3DD59-A993-4616-AA6B-74CDD5340130}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PpRBuilder</RootNamespace>
+    <AssemblyName>Prepril Remote Builder</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>PpRBuilder.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\joystick.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PpRStandardLib">
+      <HintPath>..\PpRStandardLib\bin\Debug\PpRStandardLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Builder\AvailableCertificates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Builder\AvailableCertificates.Designer.cs">
+      <DependentUpon>AvailableCertificates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Builder\Builder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Builder\Controls\create_stub_AddPlugins.cs" />
+    <Compile Include="Builder\Controls\create_stub_AssemblyBinding.cs" />
+    <Compile Include="Builder\Controls\create_stub_BlackList.cs" />
+    <Compile Include="Builder\Controls\create_stub_BuildFinalization.cs" />
+    <Compile Include="Builder\Controls\create_stub_ChooseIcon.cs" />
+    <Compile Include="Builder\Controls\create_stub_Connections.cs" />
+    <Compile Include="Builder\Controls\create_stub_DisplayMsgBox.cs" />
+    <Compile Include="Builder\Controls\create_stub_FileBinder.cs" />
+    <Compile Include="Builder\Controls\create_stub_General.cs" />
+    <Compile Include="Builder\Controls\create_stub_HostsEditor.cs" />
+    <Compile Include="Builder\Controls\create_stub_Installation.cs" />
+    <Compile Include="Builder\Controls\create_stub_Overview.cs" />
+    <Compile Include="Builder\Controls\create_stub_Permissions.cs" />
+    <Compile Include="Builder\Controls\create_stub_ProcessInjection.cs" />
+    <Compile Include="Builder\Controls\create_stub_Redistribution.cs" />
+    <Compile Include="Builder\Controls\create_stub_Rootkit.cs" />
+    <Compile Include="Builder\Controls\create_stub_SafeMode.cs" />
+    <Compile Include="Builder\Controls\create_stub_SSLTLS.cs" />
+    <Compile Include="Builder\ProfileManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Builder\ProfileManager.Designer.cs">
+      <DependentUpon>ProfileManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Builder\ProfileMisc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Builder\ProfileMisc.Designer.cs">
+      <DependentUpon>ProfileMisc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Builder\AvailableCertificates.resx">
+      <DependentUpon>AvailableCertificates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Builder\Builder.resx">
+      <DependentUpon>Builder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Builder\Controls\create_stub_AddPlugins.resx">
+      <DependentUpon>create_stub_AddPlugins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Builder\Controls\create_stub_AssemblyBinding.resx">
+      <DependentUpon>create_stub_AssemblyBinding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Builder\Controls\create_stub_BlackList.resx">
+      <DependentUpon>create_stub_BlackList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Builder\Controls\create_stub_BuildFinalization.resx">
+      <DependentUpon>create_stub_BuildFinalization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Builder\Controls\create_stub_ChooseIcon.resx">
+      <DependentUpon>create_stub_ChooseIcon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Builder\Controls\create_stub_Connections.resx">
+      <DependentUpon>create_stub_Connections.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Builder\Controls\create_stub_DisplayMsgBox.resx">
+      <DependentUpon>create_stub_DisplayMsgBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Builder\Controls\create_stub_FileBinder.resx">
+      <DependentUpon>create_stub_FileBinder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Builder\Controls\create_stub_General.resx">
+      <DependentUpon>create_stub_General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Builder\Controls\create_stub_HostsEditor.resx">
+      <DependentUpon>create_stub_HostsEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Builder\Controls\create_stub_Installation.resx">
+      <DependentUpon>create_stub_Installation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Builder\Controls\create_stub_Overview.resx">
+      <DependentUpon>create_stub_Overview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Builder\Controls\create_stub_Permissions.resx">
+      <DependentUpon>create_stub_Permissions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Builder\Controls\create_stub_ProcessInjection.resx">
+      <DependentUpon>create_stub_ProcessInjection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Builder\Controls\create_stub_Redistribution.resx">
+      <DependentUpon>create_stub_Redistribution.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Builder\Controls\create_stub_Rootkit.resx">
+      <DependentUpon>create_stub_Rootkit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Builder\Controls\create_stub_SafeMode.resx">
+      <DependentUpon>create_stub_SafeMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Builder\Controls\create_stub_SSLTLS.resx">
+      <DependentUpon>create_stub_SSLTLS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Builder\ProfileManager.resx">
+      <DependentUpon>ProfileManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Builder\ProfileMisc.resx">
+      <DependentUpon>ProfileMisc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\builder\application.png" />
+    <Content Include="Resources\builder\check_box_list.png" />
+    <Content Include="Resources\builder\connections.png" />
+    <Content Include="Resources\builder\dialog.png" />
+    <Content Include="Resources\builder\distribution.png" />
+    <Content Include="Resources\builder\dns.png" />
+    <Content Include="Resources\builder\firewall.png" />
+    <Content Include="Resources\builder\information.png" />
+    <Content Include="Resources\builder\plugin_add.png" />
+    <Content Include="Resources\builder\radioactivity.png" />
+    <Content Include="Resources\builder\setup.png" />
+    <Content Include="Resources\builder\shield.png" />
+    <Content Include="Resources\builder\system_monitor.png" />
+    <Content Include="Resources\builder\system_time.png" />
+    <Content Include="Resources\builder\vcard.png" />
+    <Content Include="Resources\joystick.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

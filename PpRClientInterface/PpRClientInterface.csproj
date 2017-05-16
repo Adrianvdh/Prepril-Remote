@@ -1,0 +1,960 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{65B51256-1E2C-42EA-A278-58656A52170A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PpRClientInterface</RootNamespace>
+    <AssemblyName>Prepril Remote Client</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\joystick.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>PpRClientInterface.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Project Controller.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Project Controller.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>4B30A995670F7358820D70ABF6BFB71CF660F81E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>certificate.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>certificate.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Controls\CategoryPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Client\OnConnect\ConfTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Client\OnConnect\ConfTask.Designer.cs">
+      <DependentUpon>ConfTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Client\OnConnect\Controls\task_AssignGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Client\OnConnect\Controls\task_AssignGroup.Designer.cs">
+      <DependentUpon>task_AssignGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Client\OnConnect\Controls\task_Build.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Client\OnConnect\Controls\task_Build.Designer.cs">
+      <DependentUpon>task_Build.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Client\OnConnect\Controls\task_Ping.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Client\OnConnect\Controls\task_Ping.Designer.cs">
+      <DependentUpon>task_Ping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Client\OnConnect\Controls\task_Plugins.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Client\OnConnect\Controls\task_Plugins.Designer.cs">
+      <DependentUpon>task_Plugins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Misc\About\AboutTb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Misc\About\AboutTb.Designer.cs">
+      <DependentUpon>AboutTb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Misc\About\about_components.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Misc\About\about_components.Designer.cs">
+      <DependentUpon>about_components.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Misc\About\about_licence.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Misc\About\about_licence.Designer.cs">
+      <DependentUpon>about_licence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Misc\About\about_version.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Misc\About\about_version.Designer.cs">
+      <DependentUpon>about_version.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Client\ClientInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Client\ClientInterface.designer.cs">
+      <DependentUpon>ClientInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings\Controls\conf_template.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\Controls\settings_advanced.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\Controls\settings_connections.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\Controls\settings_development.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\Controls\settings_general.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\Controls\settings_interface.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\Controls\settings_language.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\Controls\settings_logging.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\Controls\settings_remote.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\Controls\settings_updates.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Client\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Client\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Plugins\PluginManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Plugins\PluginManager.Designer.cs">
+      <DependentUpon>PluginManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Server\AddressManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Server\AddressManager.Designer.cs">
+      <DependentUpon>AddressManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StubServer\AddConnection\NetworkScan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StubServer\AddConnection\NetworkScan.Designer.cs">
+      <DependentUpon>NetworkScan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StubServer\DirectConnect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StubServer\DirectConnect.Designer.cs">
+      <DependentUpon>DirectConnect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Client\Tasks\TaskProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Client\Tasks\TaskProperties.Designer.cs">
+      <DependentUpon>TaskProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StubServer\ConfRating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StubServer\ConfRating.Designer.cs">
+      <DependentUpon>ConfRating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StubServer\Updater\BuildUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StubServer\Updater\BuildUpdate.designer.cs">
+      <DependentUpon>BuildUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Client\Find.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Client\Find.Designer.cs">
+      <DependentUpon>Find.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StubServer\AddConnection\NewConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StubServer\AddConnection\NewConnection.Designer.cs">
+      <DependentUpon>NewConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StubServer\Updater\AutoUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StubServer\Updater\AutoUpdate.Designer.cs">
+      <DependentUpon>AutoUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StubServer\BuildManager\PermissionsManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StubServer\BuildManager\PermissionsManager.Designer.cs">
+      <DependentUpon>PermissionsManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StubServer\BuildManager\BuildManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StubServer\BuildManager\BuildManager.Designer.cs">
+      <DependentUpon>BuildManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StubServer\RemotePluginManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StubServer\RemotePluginManager.designer.cs">
+      <DependentUpon>RemotePluginManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\Analytics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\Analytics.Designer.cs">
+      <DependentUpon>Analytics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Client\ModuleUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Client\ModuleUpdate.Designer.cs">
+      <DependentUpon>ModuleUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users\UserDataAutoSync.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users\UserDataAutoSync.Designer.cs">
+      <DependentUpon>UserDataAutoSync.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Plugins\CategoryEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Plugins\CategoryEditor.designer.cs">
+      <DependentUpon>CategoryEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\Statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\Statistics.designer.cs">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StubServer\GroupManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StubServer\GroupManager.Designer.cs">
+      <DependentUpon>GroupManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Client\Columns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Client\Columns.designer.cs">
+      <DependentUpon>Columns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Client\Tasks\AllTasks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Client\Tasks\AllTasks.Designer.cs">
+      <DependentUpon>AllTasks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StubServer\AddConnection\ManualAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StubServer\AddConnection\ManualAdd.Designer.cs">
+      <DependentUpon>ManualAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Server\QuickConnect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Server\QuickConnect.Designer.cs">
+      <DependentUpon>QuickConnect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tools\IPAddressTracker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tools\IPAddressTracker.Designer.cs">
+      <DependentUpon>IPAddressTracker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StubServer\Properties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StubServer\Properties.Designer.cs">
+      <DependentUpon>Properties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users\UserDataManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users\UserDataManager.Designer.cs">
+      <DependentUpon>UserDataManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Users\UserDataUtil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Users\UserDataUtil.Designer.cs">
+      <DependentUpon>UserDataUtil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Misc\Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Misc\Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\CategoryPanel.resx">
+      <DependentUpon>CategoryPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Client\OnConnect\ConfTask.resx">
+      <DependentUpon>ConfTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Client\OnConnect\Controls\task_AssignGroup.resx">
+      <DependentUpon>task_AssignGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Client\OnConnect\Controls\task_Build.resx">
+      <DependentUpon>task_Build.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Client\OnConnect\Controls\task_Ping.resx">
+      <DependentUpon>task_Ping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Client\OnConnect\Controls\task_Plugins.resx">
+      <DependentUpon>task_Plugins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Misc\About\AboutTb.resx">
+      <DependentUpon>AboutTb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Misc\About\about_components.resx">
+      <DependentUpon>about_components.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Misc\About\about_licence.resx">
+      <DependentUpon>about_licence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Misc\About\about_version.resx">
+      <DependentUpon>about_version.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\Controls\settings_advanced.resx">
+      <DependentUpon>settings_advanced.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\Controls\settings_connections.resx">
+      <DependentUpon>settings_connections.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\Controls\settings_interface.resx">
+      <DependentUpon>settings_interface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\Controls\settings_language.resx">
+      <DependentUpon>settings_language.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\Controls\settings_updates.resx">
+      <DependentUpon>settings_updates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Client\ClientInterface.resx">
+      <DependentUpon>ClientInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\Controls\conf_template.resx">
+      <DependentUpon>conf_template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\Controls\settings_development.resx">
+      <DependentUpon>settings_development.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\Controls\settings_general.resx">
+      <DependentUpon>settings_general.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\Controls\settings_logging.resx">
+      <DependentUpon>settings_logging.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\Controls\settings_remote.resx">
+      <DependentUpon>settings_remote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Client\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Plugins\PluginManager.resx">
+      <DependentUpon>PluginManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Server\AddressManager.resx">
+      <DependentUpon>AddressManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StubServer\AddConnection\NetworkScan.resx">
+      <DependentUpon>NetworkScan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StubServer\DirectConnect.resx">
+      <DependentUpon>DirectConnect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Client\Tasks\TaskProperties.resx">
+      <DependentUpon>TaskProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StubServer\ConfRating.resx">
+      <DependentUpon>ConfRating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StubServer\Updater\BuildUpdate.resx">
+      <DependentUpon>BuildUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Client\Find.resx">
+      <DependentUpon>Find.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StubServer\AddConnection\NewConnection.resx">
+      <DependentUpon>NewConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StubServer\RemotePluginManager.resx">
+      <DependentUpon>RemotePluginManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StubServer\Updater\AutoUpdate.resx">
+      <DependentUpon>AutoUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StubServer\BuildManager\PermissionsManager.resx">
+      <DependentUpon>PermissionsManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StubServer\BuildManager\BuildManager.resx">
+      <DependentUpon>BuildManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\Analytics.resx">
+      <DependentUpon>Analytics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Client\ModuleUpdate.resx">
+      <DependentUpon>ModuleUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users\UserDataAutoSync.resx">
+      <DependentUpon>UserDataAutoSync.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users\UserDataManager.resx">
+      <DependentUpon>UserDataManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Plugins\CategoryEditor.resx">
+      <DependentUpon>CategoryEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StubServer\GroupManager.resx">
+      <DependentUpon>GroupManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\Statistics.resx">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Client\Columns.resx">
+      <DependentUpon>Columns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Client\Tasks\AllTasks.resx">
+      <DependentUpon>AllTasks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StubServer\AddConnection\ManualAdd.resx">
+      <DependentUpon>ManualAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Server\QuickConnect.resx">
+      <DependentUpon>QuickConnect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tools\IPAddressTracker.resx">
+      <DependentUpon>IPAddressTracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StubServer\Properties.resx">
+      <DependentUpon>Properties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Users\UserDataUtil.resx">
+      <DependentUpon>UserDataUtil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Misc\Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\app.config" />
+    <None Include="certificate.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5 SP2</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Chat.Client">
+      <HintPath>..\Plugins\Chat\Chat.Client\bin\Debug\Chat.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ClipboardManager.Client">
+      <HintPath>..\Plugins\ClipboardManager\ClipboardManager.Client\bin\Debug\ClipboardManager.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="CredentialManager.Client">
+      <HintPath>..\Plugins\CredentialManager\CredentialManager.Client\bin\Debug\CredentialManager.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="DatabaseManager.Client">
+      <HintPath>..\Plugins\DatabaseManager\DatabaseManager.Client\bin\Debug\DatabaseManager.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="DDOS.Client">
+      <HintPath>..\Plugins\DDOS\DDOS.Client\bin\Debug\DDOS.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="DemoPlugin.Client">
+      <HintPath>..\Plugins\DemoPlugin\DemoPlugin.Client\bin\Debug\DemoPlugin.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ExtendedScripts.Client">
+      <HintPath>..\Plugins\ExtendedScripts\ExtendedScripts.Client\bin\Debug\ExtendedScripts.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="FileTransfer.Client">
+      <HintPath>..\Plugins\FileTransfer\FileTransfer.Client\bin\Debug\FileTransfer.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="KeyLogger.Client">
+      <HintPath>..\Plugins\KeyLogger\KeyLogger.Client\bin\Debug\KeyLogger.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="MediaManager.Client">
+      <HintPath>..\Plugins\MediaManager\MediaManager.Client\bin\Debug\MediaManager.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="MsgBox.Client">
+      <HintPath>..\Plugins\MsgBox\MsgBox.Client\bin\Debug\MsgBox.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="NetworkFunctions.Client">
+      <HintPath>..\Plugins\NetworkFunctions\NetworkFunctions.Client\bin\Debug\NetworkFunctions.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="PpRStandardLib">
+      <HintPath>..\PpRStandardLib\bin\Debug\PpRStandardLib.dll</HintPath>
+    </Reference>
+    <Reference Include="PrintManager.Client">
+      <HintPath>..\Plugins\PrintManager\PrintManager.Client\bin\Debug\PrintManager.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ProcessManager.Client">
+      <HintPath>..\Plugins\ProcessManager\ProcessManager.Client\bin\Debug\ProcessManager.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="RDPCapture.Client">
+      <HintPath>..\Plugins\RDPCapture\RDPCapture.Client\bin\Debug\RDPCapture.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="RemoteSearch.Client">
+      <HintPath>..\Plugins\RemoteSearch\RemoteSearch.Client\bin\Debug\RemoteSearch.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="SoundCapture.Client, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Plugins\SoundCapture\SoundCapture.Client\bin\Debug\SoundCapture.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="SSH.Client">
+      <HintPath>..\Plugins\SSH\SSH.Client\bin\Debug\SSH.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+    <Reference Include="SystemManager.Client">
+      <HintPath>..\Plugins\SystemManager\SystemManager.Client\bin\Debug\SystemManager.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="TorrentSeeder.Client">
+      <HintPath>..\Plugins\TorrentSeeder\TorrentSeeder.Client\bin\Debug\TorrentSeeder.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="WebcamCapture.Client">
+      <HintPath>..\Plugins\WebcamCapture\WebcamCapture.Client\bin\Debug\WebcamCapture.Client.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\book_addresses.png" />
+    <Content Include="Resources\builder\application.png" />
+    <Content Include="Resources\builder\check_box_list.png" />
+    <Content Include="Resources\builder\connections.png" />
+    <Content Include="Resources\builder\dialog.png" />
+    <Content Include="Resources\builder\distribution.png" />
+    <Content Include="Resources\builder\dns.png" />
+    <Content Include="Resources\builder\firewall.png" />
+    <Content Include="Resources\builder\information.png" />
+    <Content Include="Resources\builder\plugin_add.png" />
+    <Content Include="Resources\builder\radioactivity.png" />
+    <Content Include="Resources\builder\setup.png" />
+    <Content Include="Resources\builder\shield.png" />
+    <Content Include="Resources\builder\system_monitor.png" />
+    <Content Include="Resources\builder\system_time.png" />
+    <Content Include="Resources\builder\vcard.png" />
+    <Content Include="Resources\chart_bar.png" />
+    <Content Include="Resources\chart_line.png" />
+    <Content Include="Resources\cog_edit.png" />
+    <Content Include="Resources\find.png" />
+    <Content Include="Resources\flags\ad.png" />
+    <Content Include="Resources\flags\ae.png" />
+    <Content Include="Resources\flags\af.png" />
+    <Content Include="Resources\flags\ag.png" />
+    <Content Include="Resources\flags\ai.png" />
+    <Content Include="Resources\flags\al.png" />
+    <Content Include="Resources\flags\am.png" />
+    <Content Include="Resources\flags\an.png" />
+    <Content Include="Resources\flags\ao.png" />
+    <Content Include="Resources\flags\ar.png" />
+    <Content Include="Resources\flags\as.png" />
+    <Content Include="Resources\flags\at.png" />
+    <Content Include="Resources\flags\au.png" />
+    <Content Include="Resources\flags\aw.png" />
+    <Content Include="Resources\flags\ax.png" />
+    <Content Include="Resources\flags\az.png" />
+    <Content Include="Resources\flags\ba.png" />
+    <Content Include="Resources\flags\bb.png" />
+    <Content Include="Resources\flags\bd.png" />
+    <Content Include="Resources\flags\be.png" />
+    <Content Include="Resources\flags\bf.png" />
+    <Content Include="Resources\flags\bg.png" />
+    <Content Include="Resources\flags\bh.png" />
+    <Content Include="Resources\flags\bi.png" />
+    <Content Include="Resources\flags\bj.png" />
+    <Content Include="Resources\flags\bm.png" />
+    <Content Include="Resources\flags\bn.png" />
+    <Content Include="Resources\flags\bo.png" />
+    <Content Include="Resources\flags\br.png" />
+    <Content Include="Resources\flags\bs.png" />
+    <Content Include="Resources\flags\bt.png" />
+    <Content Include="Resources\flags\bv.png" />
+    <Content Include="Resources\flags\bw.png" />
+    <Content Include="Resources\flags\by.png" />
+    <Content Include="Resources\flags\bz.png" />
+    <Content Include="Resources\flags\ca.png" />
+    <Content Include="Resources\flags\catalonia.png" />
+    <Content Include="Resources\flags\cc.png" />
+    <Content Include="Resources\flags\cd.png" />
+    <Content Include="Resources\flags\cf.png" />
+    <Content Include="Resources\flags\cg.png" />
+    <Content Include="Resources\flags\ch.png" />
+    <Content Include="Resources\flags\ci.png" />
+    <Content Include="Resources\flags\ck.png" />
+    <Content Include="Resources\flags\cl.png" />
+    <Content Include="Resources\flags\cm.png" />
+    <Content Include="Resources\flags\cn.png" />
+    <Content Include="Resources\flags\co.png" />
+    <Content Include="Resources\flags\cr.png" />
+    <Content Include="Resources\flags\cs.png" />
+    <Content Include="Resources\flags\cu.png" />
+    <Content Include="Resources\flags\cv.png" />
+    <Content Include="Resources\flags\cx.png" />
+    <Content Include="Resources\flags\cy.png" />
+    <Content Include="Resources\flags\cz.png" />
+    <Content Include="Resources\flags\de.png" />
+    <Content Include="Resources\flags\dj.png" />
+    <Content Include="Resources\flags\dk.png" />
+    <Content Include="Resources\flags\dm.png" />
+    <Content Include="Resources\flags\do.png" />
+    <Content Include="Resources\flags\dz.png" />
+    <Content Include="Resources\flags\ec.png" />
+    <Content Include="Resources\flags\ee.png" />
+    <Content Include="Resources\flags\eg.png" />
+    <Content Include="Resources\flags\eh.png" />
+    <Content Include="Resources\flags\england.png" />
+    <Content Include="Resources\flags\er.png" />
+    <Content Include="Resources\flags\es.png" />
+    <Content Include="Resources\flags\et.png" />
+    <Content Include="Resources\flags\europeanunion.png" />
+    <Content Include="Resources\flags\fam.png" />
+    <Content Include="Resources\flags\fi.png" />
+    <Content Include="Resources\flags\fj.png" />
+    <Content Include="Resources\flags\fk.png" />
+    <Content Include="Resources\flags\fm.png" />
+    <Content Include="Resources\flags\fo.png" />
+    <Content Include="Resources\flags\fr.png" />
+    <Content Include="Resources\flags\ga.png" />
+    <Content Include="Resources\flags\gb.png" />
+    <Content Include="Resources\flags\gd.png" />
+    <Content Include="Resources\flags\ge.png" />
+    <Content Include="Resources\flags\gf.png" />
+    <Content Include="Resources\flags\gh.png" />
+    <Content Include="Resources\flags\gi.png" />
+    <Content Include="Resources\flags\gl.png" />
+    <Content Include="Resources\flags\gm.png" />
+    <Content Include="Resources\flags\gn.png" />
+    <Content Include="Resources\flags\gp.png" />
+    <Content Include="Resources\flags\gq.png" />
+    <Content Include="Resources\flags\gr.png" />
+    <Content Include="Resources\flags\gs.png" />
+    <Content Include="Resources\flags\gt.png" />
+    <Content Include="Resources\flags\gu.png" />
+    <Content Include="Resources\flags\gw.png" />
+    <Content Include="Resources\flags\gy.png" />
+    <Content Include="Resources\flags\hk.png" />
+    <Content Include="Resources\flags\hm.png" />
+    <Content Include="Resources\flags\hn.png" />
+    <Content Include="Resources\flags\hr.png" />
+    <Content Include="Resources\flags\ht.png" />
+    <Content Include="Resources\flags\hu.png" />
+    <Content Include="Resources\flags\id.png" />
+    <Content Include="Resources\flags\ie.png" />
+    <Content Include="Resources\flags\il.png" />
+    <Content Include="Resources\flags\in.png" />
+    <Content Include="Resources\flags\io.png" />
+    <Content Include="Resources\flags\iq.png" />
+    <Content Include="Resources\flags\ir.png" />
+    <Content Include="Resources\flags\is.png" />
+    <Content Include="Resources\flags\it.png" />
+    <Content Include="Resources\flags\jm.png" />
+    <Content Include="Resources\flags\jo.png" />
+    <Content Include="Resources\flags\jp.png" />
+    <Content Include="Resources\flags\ke.png" />
+    <Content Include="Resources\flags\kg.png" />
+    <Content Include="Resources\flags\kh.png" />
+    <Content Include="Resources\flags\ki.png" />
+    <Content Include="Resources\flags\km.png" />
+    <Content Include="Resources\flags\kn.png" />
+    <Content Include="Resources\flags\kp.png" />
+    <Content Include="Resources\flags\kr.png" />
+    <Content Include="Resources\flags\kw.png" />
+    <Content Include="Resources\flags\ky.png" />
+    <Content Include="Resources\flags\kz.png" />
+    <Content Include="Resources\flags\la.png" />
+    <Content Include="Resources\flags\lb.png" />
+    <Content Include="Resources\flags\lc.png" />
+    <Content Include="Resources\flags\li.png" />
+    <Content Include="Resources\flags\lk.png" />
+    <Content Include="Resources\flags\lr.png" />
+    <Content Include="Resources\flags\ls.png" />
+    <Content Include="Resources\flags\lt.png" />
+    <Content Include="Resources\flags\lu.png" />
+    <Content Include="Resources\flags\lv.png" />
+    <Content Include="Resources\flags\ly.png" />
+    <Content Include="Resources\flags\ma.png" />
+    <Content Include="Resources\flags\mc.png" />
+    <Content Include="Resources\flags\md.png" />
+    <Content Include="Resources\flags\me.png" />
+    <Content Include="Resources\flags\mg.png" />
+    <Content Include="Resources\flags\mh.png" />
+    <Content Include="Resources\flags\mk.png" />
+    <Content Include="Resources\flags\ml.png" />
+    <Content Include="Resources\flags\mm.png" />
+    <Content Include="Resources\flags\mn.png" />
+    <Content Include="Resources\flags\mo.png" />
+    <Content Include="Resources\flags\mp.png" />
+    <Content Include="Resources\flags\mq.png" />
+    <Content Include="Resources\flags\mr.png" />
+    <Content Include="Resources\flags\ms.png" />
+    <Content Include="Resources\flags\mt.png" />
+    <Content Include="Resources\flags\mu.png" />
+    <Content Include="Resources\flags\mv.png" />
+    <Content Include="Resources\flags\mw.png" />
+    <Content Include="Resources\flags\mx.png" />
+    <Content Include="Resources\flags\my.png" />
+    <Content Include="Resources\flags\mz.png" />
+    <Content Include="Resources\flags\na.png" />
+    <Content Include="Resources\flags\nc.png" />
+    <Content Include="Resources\flags\ne.png" />
+    <Content Include="Resources\flags\nf.png" />
+    <Content Include="Resources\flags\ng.png" />
+    <Content Include="Resources\flags\ni.png" />
+    <Content Include="Resources\flags\nl.png" />
+    <Content Include="Resources\flags\no.png" />
+    <Content Include="Resources\flags\np.png" />
+    <Content Include="Resources\flags\nr.png" />
+    <Content Include="Resources\flags\nu.png" />
+    <Content Include="Resources\flags\nz.png" />
+    <Content Include="Resources\flags\om.png" />
+    <Content Include="Resources\flags\pa.png" />
+    <Content Include="Resources\flags\pe.png" />
+    <Content Include="Resources\flags\pf.png" />
+    <Content Include="Resources\flags\pg.png" />
+    <Content Include="Resources\flags\ph.png" />
+    <Content Include="Resources\flags\pk.png" />
+    <Content Include="Resources\flags\pl.png" />
+    <Content Include="Resources\flags\pm.png" />
+    <Content Include="Resources\flags\pn.png" />
+    <Content Include="Resources\flags\pr.png" />
+    <Content Include="Resources\flags\ps.png" />
+    <Content Include="Resources\flags\pt.png" />
+    <Content Include="Resources\flags\pw.png" />
+    <Content Include="Resources\flags\py.png" />
+    <Content Include="Resources\flags\qa.png" />
+    <Content Include="Resources\flags\re.png" />
+    <Content Include="Resources\flags\ro.png" />
+    <Content Include="Resources\flags\rs.png" />
+    <Content Include="Resources\flags\ru.png" />
+    <Content Include="Resources\flags\rw.png" />
+    <Content Include="Resources\flags\sa.png" />
+    <Content Include="Resources\flags\sb.png" />
+    <Content Include="Resources\flags\sc.png" />
+    <Content Include="Resources\flags\scotland.png" />
+    <Content Include="Resources\flags\sd.png" />
+    <Content Include="Resources\flags\se.png" />
+    <Content Include="Resources\flags\sg.png" />
+    <Content Include="Resources\flags\sh.png" />
+    <Content Include="Resources\flags\si.png" />
+    <Content Include="Resources\flags\sj.png" />
+    <Content Include="Resources\flags\sk.png" />
+    <Content Include="Resources\flags\sl.png" />
+    <Content Include="Resources\flags\sm.png" />
+    <Content Include="Resources\flags\sn.png" />
+    <Content Include="Resources\flags\so.png" />
+    <Content Include="Resources\flags\sr.png" />
+    <Content Include="Resources\flags\st.png" />
+    <Content Include="Resources\flags\sv.png" />
+    <Content Include="Resources\flags\sy.png" />
+    <Content Include="Resources\flags\sz.png" />
+    <Content Include="Resources\flags\tc.png" />
+    <Content Include="Resources\flags\td.png" />
+    <Content Include="Resources\flags\tf.png" />
+    <Content Include="Resources\flags\tg.png" />
+    <Content Include="Resources\flags\th.png" />
+    <Content Include="Resources\flags\tj.png" />
+    <Content Include="Resources\flags\tk.png" />
+    <Content Include="Resources\flags\tl.png" />
+    <Content Include="Resources\flags\tm.png" />
+    <Content Include="Resources\flags\tn.png" />
+    <Content Include="Resources\flags\to.png" />
+    <Content Include="Resources\flags\tr.png" />
+    <Content Include="Resources\flags\tt.png" />
+    <Content Include="Resources\flags\tv.png" />
+    <Content Include="Resources\flags\tw.png" />
+    <Content Include="Resources\flags\tz.png" />
+    <Content Include="Resources\flags\ua.png" />
+    <Content Include="Resources\flags\ug.png" />
+    <Content Include="Resources\flags\um.png" />
+    <Content Include="Resources\flags\us.png" />
+    <Content Include="Resources\flags\uy.png" />
+    <Content Include="Resources\flags\uz.png" />
+    <Content Include="Resources\flags\va.png" />
+    <Content Include="Resources\flags\vc.png" />
+    <Content Include="Resources\flags\ve.png" />
+    <Content Include="Resources\flags\vg.png" />
+    <Content Include="Resources\flags\vi.png" />
+    <Content Include="Resources\flags\vn.png" />
+    <Content Include="Resources\flags\vu.png" />
+    <Content Include="Resources\flags\wales.png" />
+    <Content Include="Resources\flags\wf.png" />
+    <Content Include="Resources\flags\ws.png" />
+    <Content Include="Resources\flags\ye.png" />
+    <Content Include="Resources\flags\yt.png" />
+    <Content Include="Resources\flags\za.png" />
+    <Content Include="Resources\flags\zm.png" />
+    <Content Include="Resources\flags\zw.png" />
+    <Content Include="Resources\joystick.png" />
+    <Content Include="Resources\joystick.ico" />
+    <Content Include="Resources\network_tools.png" />
+    <Content Include="Resources\plug_connect.png" />
+    <Content Include="Resources\plug_disconnect.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
